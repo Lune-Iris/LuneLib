@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="..\tModLoader.targets" />
+	<PropertyGroup>
+		<AssemblyName>LuneLib</AssemblyName>
+		<LangVersion>latest</LangVersion>
+	</PropertyGroup>
+	<ItemGroup>
+		<Reference Include="CalValEX">
+			<HintPath>..\..\ModReader\CalValEX\CalValEX.dll</HintPath>
+		</Reference>
+		<Reference Include="CalamityMod">
+			<HintPath>..\..\ModReader\CalamityMod\CalamityMod.dll</HintPath>
+		</Reference>
+		<Reference Include="SpiritMod">
+			<HintPath>..\..\ModReader\SpiritMod\SpiritMod.dll</HintPath>
+		</Reference>
+		<Reference Include="InfernumMode">
+			<HintPath>..\..\ModReader\InfernumMode\InfernumMode.dll</HintPath>
+		</Reference>
+		<Reference Include="ThoriumMod">
+			<HintPath>..\..\ModReader\ThoriumMod\ThoriumMod.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+</Project>

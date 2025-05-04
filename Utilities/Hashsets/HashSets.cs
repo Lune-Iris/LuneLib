@@ -7,9 +7,6 @@ namespace LuneLib.Utilities.Hashsets
 {
     public static class HashSets
     {
-
-        #region HashSet Contains Type
-
         #region HashSet Contains Ore Tile
 
         public static bool HashSetContainsOreTile(int type) =>
@@ -112,12 +109,11 @@ namespace LuneLib.Utilities.Hashsets
         #region HashSet Contains Aquatic Tile
 
         public static bool HashSetContainsAquaticTile(int type) =>
-            ContainsCalAquaticTile(type) || ContainsCalMAquaticTile(type) || ContainsThorAquaticTile(type);
+            ContainsCalAquaticTile(type) || ContainsThorAquaticTile(type);
 
         public static bool ContainsCalAquaticTile(int type) =>
             LuneLib.instance.CalamityModLoaded && CalSets.IsAquaticTile.Contains(type);
-        public static bool ContainsCalMAquaticTile(int type) =>
-            LuneLib.instance.CalamitasMommyLoaded && CalMSets.IsAquaticTile.Contains(type);
+
         public static bool ContainsThorAquaticTile(int type) =>
             LuneLib.instance.ThoriumModLoaded && ThorSets.IsAquaticTile.Contains(type);
 
@@ -134,8 +130,5 @@ namespace LuneLib.Utilities.Hashsets
             LuneLib.instance.ThoriumModLoaded && ThorSets.IsAquaticWall.Contains(type);
 
         #endregion
-
-        #endregion
-
     }
 }

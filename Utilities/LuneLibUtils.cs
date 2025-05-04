@@ -1,5 +1,4 @@
 ﻿using CalamityMod.BiomeManagers;
-using LuneLib.Common.NPCs.LuneLibNpc;
 using LuneLib.Common.Players.LuneLibPlayer;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -18,7 +17,7 @@ namespace LuneLib.Utilities
 {
     public static class LuneLibUtils
     {
-        #region fields and properties go ehre plss -w-
+        #region fields and properties go ehre plss
 
         /// <summary>
         /// L is just Main.CurrentPlayer
@@ -34,33 +33,14 @@ namespace LuneLib.Utilities
         /// Checks if it's my SteamID
         /// </summary>
         public static bool LL => LuneL(L);
+        /// <summary>
+        /// Checks if it's my partners SteamID
+        /// </summary>
+        public static bool LM => LuneL(L);
+        /// <summary>
+        /// Checks if it's a past artists SteamID
+        /// </summary>
         public static bool LE => LuneE(L);
-
-        public static bool ZoneOcean => L.ZoneBeach;
-
-        [JITWhenModsEnabled("CalamityMod")]
-        public static bool ZoneSunkenSea => L.InModBiome(ModContent.GetInstance<SunkenSeaBiome>());
-
-        [JITWhenModsEnabled("CalamityMod")]
-        public static bool ZoneSulphur => L.InModBiome(ModContent.GetInstance<SulphurousSeaBiome>());
-
-        [JITWhenModsEnabled("CalamityMod")]
-        public static bool ZoneAbyssLayer1 => L.InModBiome(ModContent.GetInstance<AbyssLayer1Biome>());
-
-        [JITWhenModsEnabled("CalamityMod")]
-        public static bool ZoneAbyssLayer2 => L.InModBiome(ModContent.GetInstance<AbyssLayer2Biome>());
-
-        [JITWhenModsEnabled("CalamityMod")]
-        public static bool ZoneAbyssLayer3 => L.InModBiome(ModContent.GetInstance<AbyssLayer3Biome>());
-
-        [JITWhenModsEnabled("CalamityMod")]
-        public static bool ZoneAbyssLayer4 => L.InModBiome(ModContent.GetInstance<AbyssLayer4Biome>());
-
-        [JITWhenModsEnabled("CalamityMod")]
-        public static bool ZoneAbyss => ZoneAbyssLayer1 || ZoneAbyssLayer2 || ZoneAbyssLayer3 || ZoneAbyssLayer4;
-
-        [JITWhenModsEnabled("CalamityMod")]
-        public static bool ZoneAquatic => ZoneSulphur || ZoneOcean || ZoneSunkenSea;
 
         private static Texture2D messageBackground;
         #endregion
@@ -175,16 +155,16 @@ namespace LuneLib.Utilities
                 Main.UIScaleMatrix);
 
             Color textColor = new Color(textR, textG, textB) * (textA / 255f);
-            Color backgroundColor = new Color(bgR, bgG, bgB, bgA);
+            Color backgroundColor = new(bgR, bgG, bgB, bgA);
 
             DynamicSpriteFont font = FontAssets.MouseText.Value;
-            Vector2 textPosition = new Vector2(Main.screenWidth / 2, Main.screenHeight / 2 + textHeight);
+            Vector2 textPosition = new(Main.screenWidth / 2, Main.screenHeight / 2 + textHeight);
             Vector2 stringSize = font.MeasureString(input) * textSize;
             textPosition.X -= stringSize.X / 2;
 
             if (bgA != 0)
             {
-                Rectangle backgroundRectangle = new Rectangle(0, 0, Main.screenWidth + 32, Main.screenHeight + 32);
+                Rectangle backgroundRectangle = new(0, 0, Main.screenWidth + 32, Main.screenHeight + 32);
                 Main.spriteBatch.Draw(messageBackground, backgroundRectangle, backgroundColor);
             }
 
@@ -262,7 +242,7 @@ namespace LuneLib.Utilities
 
         #endregion
 
-        #region LL
+        #region Players
         /// <summary>
         /// Checks if it's my SteamID
         /// </summary>
@@ -276,23 +256,22 @@ namespace LuneLib.Utilities
                 return true;
             return false;
         }
-        #endregion
+        
+        /// <summary>
+        /// Checks if it's my partners SteamID
+        /// </summary>
+        /// <param name="player"></param>
+        /// <returns></returns>
+        public static bool LuneM(this Player player) => steamID.ToString() == "76561199229515262" && debug.LL && !player.dead;
 
-        #region LE
         /// <summary>
         /// Checks if it's a past artists SteamID
         /// </summary>
         /// <param name="player"></param>
         /// <returns></returns>
-        public static bool LuneE(this Player player) => steamID.ToString() == "76561198348118589" && debug.LL && player.whoAmI == Main.myPlayer;
-        #endregion
+        public static bool LuneE(this Player player) => steamID.ToString() == "76561198348118589" && debug.LL && !player.dead;
 
-        #region player
         public static LibPlayer LibPlayer(this Player player) => player.GetModPlayer<LibPlayer>();
-        #endregion
-
-        #region npc
-        public static LibNpcData LibNPC(this NPC npc) => npc.GetGlobalNPC<LibNpcData>();
         #endregion
 
         #region checks
@@ -300,12 +279,6 @@ namespace LuneLib.Utilities
 
         #endregion
 
-        public static float ToPercentage(int value)
-        {
-            if (value < 0) value = 0;
-            if (value > 100) value = 100;
-            return value / 100;
-        }
         public static void FuckingShit(string message)
         {
             if (clientConfig.DebugMessages)

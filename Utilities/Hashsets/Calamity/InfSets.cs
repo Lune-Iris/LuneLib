@@ -36,30 +36,13 @@ namespace LuneLib.Utilities.Hashsets
             }
         }
 
-        #region Abyssal Projectiles
-
         private static HashSet<int> CreateInfCalProjSpecificTypes() =>
         [
-
-            #region InfernumMode Projectiles
-
-                #region Sulphurous Sea
-
-                #endregion
-
-                #region Sunken Sea
-
-                #endregion
-
                 #region Abyss
 
                     #region Abyss Layer1
 
                         ModContent.ProjectileType<BoxJellyZap>(),
-
-                    #endregion
-
-                    #region Abyss Layer2
 
                     #endregion
 
@@ -82,33 +65,16 @@ namespace LuneLib.Utilities.Hashsets
                     #endregion
 
                 #endregion
-
-            #endregion
-
         ];
-
-        #endregion
-
-        #region Abyssal Npcs
 
         private static HashSet<int> CreateInfCalNpcSpecificTypes() =>
         [
-
-            #region InfernumMode NPCs
-
                 ModContent.NPCType<DepthFeeder>(),
                 ModContent.NPCType<Herring>(),
                 ModContent.NPCType<LionfishEnemy>(),
                 ModContent.NPCType<ColossalSquidTentacle>(),
                 ModContent.NPCType<RedirectingBubble>(),
-
-            #endregion
-
         ];
-
-        #endregion
-
-        #region Aquatic Boss Projectiles
 
         private static HashSet<int> CreateInfCalBossProjSpecificTypes() =>
         [
@@ -160,14 +126,10 @@ namespace LuneLib.Utilities.Hashsets
 
             #region Acid Rain
 
-                #region Nuclear Terror
-
-                    ModContent.ProjectileType<GammaRain>(),
-                    ModContent.ProjectileType<GammaBurstLineTelegraph>(),
-                    ModContent.ProjectileType<ConvergingGammaEnergy>(),
-                    ModContent.ProjectileType<GammaSuperDeathray>(),
-
-                #endregion
+                ModContent.ProjectileType<GammaRain>(),
+                ModContent.ProjectileType<GammaBurstLineTelegraph>(),
+                ModContent.ProjectileType<ConvergingGammaEnergy>(),
+                ModContent.ProjectileType<GammaSuperDeathray>(),
 
             #endregion
 
@@ -215,8 +177,5 @@ namespace LuneLib.Utilities.Hashsets
             #endregion
 
         ];
-
-        #endregion
-
     }
 }

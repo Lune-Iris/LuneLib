@@ -7,7 +7,7 @@ namespace LuneLib.Core.Config
     {
         public override ConfigScope Mode => ConfigScope.ClientSide;
 
-        [Header("Spammy")]
+        [Header("Client")]
 
         [DefaultValue(false)]
         public bool DebugMessages { get; set; }

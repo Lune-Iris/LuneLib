@@ -6,6 +6,7 @@ namespace LuneLib.Utilities
 {
     public static class LuneShopUtils
     {
+        //theft of AlchemistNPC code. fucking sue me for not wanting to deal with this shit
         public static NPCShop AddModItemToShop(NPCShop shop, Mod mod, string itemName, int price)
         {
             if (mod != null)

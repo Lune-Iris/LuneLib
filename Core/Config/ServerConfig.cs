@@ -7,7 +7,7 @@ namespace LuneLib.Core.Config
     {
         public override ConfigScope Mode => ConfigScope.ServerSide;
 
-        [Header("Spammy")]
+        [Header("Silly")]
 
         [DefaultValue(true)]
         public bool FreddyFiveBear { get; set; }

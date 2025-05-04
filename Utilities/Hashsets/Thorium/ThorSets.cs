@@ -45,8 +45,6 @@ namespace LuneLib.Utilities.Hashsets.Thorium
 
         }
 
-        #region Abyssal Projectiles
-
         private static HashSet<int> CreateThorProjSpecificTypes() =>
         [
             #region Ocean Proj
@@ -65,10 +63,6 @@ namespace LuneLib.Utilities.Hashsets.Thorium
 
             #endregion
         ];
-
-        #endregion
-
-        #region Abyssal Npcs
 
         private static HashSet<int> CreateThorNpcSpecificTypes() =>
         [
@@ -140,10 +134,6 @@ namespace LuneLib.Utilities.Hashsets.Thorium
 
         ];
 
-        #endregion
-
-        #region Aquatic Boss Projectiles
-
         private static HashSet<int> CreateThorBossProjSpecificTypes() =>
         [
             #region Ocean Proj
@@ -168,10 +158,6 @@ namespace LuneLib.Utilities.Hashsets.Thorium
             #endregion
         ];
 
-        #endregion
-
-        #region Aquatic Bosses
-
         private static HashSet<int> CreateThorBossSpecificTypes() =>
         [
             ModContent.NPCType<QueenJellyfish>(),
@@ -179,10 +165,6 @@ namespace LuneLib.Utilities.Hashsets.Thorium
             ModContent.NPCType<ForgottenOneCracked>(),
             ModContent.NPCType<ForgottenOneReleased>(),
         ];
-
-        #endregion
-
-        #region Is Aquatic Tile
 
         private static HashSet<int> CreateThorTileSpecificTypes() =>
         [
@@ -210,10 +192,6 @@ namespace LuneLib.Utilities.Hashsets.Thorium
             ModContent.TileType<DepthsAmber>(),
         ];
 
-        #endregion
-
-        #region Is Aquatic Wall
-
         private static HashSet<int> CreateThorWallSpecificTypes() =>
         [
 
@@ -224,8 +202,5 @@ namespace LuneLib.Utilities.Hashsets.Thorium
             ModContent.WallType<AquaiteScaleWall>(),
 
         ];
-
-        #endregion
-
     }
 }

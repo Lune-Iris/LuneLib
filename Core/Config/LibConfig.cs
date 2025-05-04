@@ -7,7 +7,7 @@ namespace LuneLib.Core.Config
     {
         public override ConfigScope Mode => ConfigScope.ServerSide;
 
-        [Header("debug101")]
+        [Header("Debug")]
 
         [DefaultValue(false)]
         [ReloadRequired]
@@ -16,10 +16,6 @@ namespace LuneLib.Core.Config
         [DefaultValue(false)]
         [ReloadRequired]
         public bool LL { get; set; }
-
-        [DefaultValue(false)]
-        [ReloadRequired]
-        public bool LunesPet { get; set; }
 
         public override void OnLoaded()
         {

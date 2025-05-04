@@ -34,8 +34,6 @@ namespace LuneLib.Utilities.Hashsets.Spirit
             }
         }
 
-        #region Abyssal Projectiles
-
         private static HashSet<int> CreateSpiritProjSpecificTypes() =>
         [
             ModContent.ProjectileType<RyBolt>(),
@@ -82,6 +80,5 @@ namespace LuneLib.Utilities.Hashsets.Spirit
             ModContent.NPCType<IronCrateMimic>(),
             ModContent.NPCType<GoldCrateMimic>(),
         ];
-        #endregion
     }
 }

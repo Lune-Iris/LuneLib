@@ -25,7 +25,7 @@ namespace LuneLib.Utilities.Hashsets.Spirit
 
         private static HashSet<int> CreateSpiritOreSet() =>
         [
-            #region prehardmode
+            // prehardmode
             ModContent.TileType<BismiteCrystalTile>(),// no clue which one it is so im adding both
             ModContent.TileType<BismiteCrystalOre>(),
             ModContent.TileType<FloranOreTile>(),
@@ -33,11 +33,9 @@ namespace LuneLib.Utilities.Hashsets.Spirit
             ModContent.TileType<GraniteOre>(),
             ModContent.TileType<Glowstone>(),
             ModContent.TileType<CryoliteOreTile>(),
-            #endregion
 
-            #region hardmode
+            // hardmode
             ModContent.TileType<SpiritOreTile>(),
-            #endregion
         ];
     }
 }

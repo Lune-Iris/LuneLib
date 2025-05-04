@@ -352,10 +352,6 @@ namespace LuneLib.Utilities.Hashsets.Calamity
                     ModContent.NPCType<Anahita>(),
                     ModContent.NPCType<LeviathanStart>(),
 
-                #endregion
-
-                #region Leviathan
-
                     ModContent.NPCType<Leviathan>(),
 
                 #endregion
@@ -383,23 +379,9 @@ namespace LuneLib.Utilities.Hashsets.Calamity
 
                 #region Acid Rain
 
-                    #region CragmawMire
-
-                        ModContent.NPCType<CragmawMire>(),
-
-                    #endregion
-
-                    #region Mauler
-
-                        ModContent.NPCType<Mauler>(),
-
-                    #endregion
-
-                    #region Nuclear Terror
-
-                        ModContent.NPCType<NuclearTerror>(),
-
-                    #endregion
+                    ModContent.NPCType<CragmawMire>(),
+                    ModContent.NPCType<Mauler>(),
+                    ModContent.NPCType<NuclearTerror>(),
 
                 #endregion
 
@@ -408,14 +390,6 @@ namespace LuneLib.Utilities.Hashsets.Calamity
             #region Sunken Sea
 
                 ModContent.NPCType<GiantClam>(),
-
-            #endregion
-
-            #region Layer1
-
-            #endregion
-
-            #region Layer2
 
             #endregion
 

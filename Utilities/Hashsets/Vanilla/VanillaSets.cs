@@ -25,25 +25,16 @@ namespace LuneLib.Utilities.Hashsets.Vanilla
 
         private static HashSet<int> CreateVanillaProjSpecificTypes() =>
         [
-
-            #region
-
                 ProjectileID.EyeBeam,
                 ProjectileID.SharknadoBolt,
                 ProjectileID.Sharknado,
                 ProjectileID.Cthulunado,
                 ProjectileID.MartianTurretBolt,
                 ProjectileID.RainNimbus,
-
-            #endregion
-
         ];
 
         private static HashSet<int> CreateVanillaNpcSpecificTypes() =>
         [
-
-            #region Vanilla NPCs
-
                 NPCID.BlueJellyfish,
                 NPCID.BloodJelly,
                 NPCID.Crab,
@@ -73,20 +64,11 @@ namespace LuneLib.Utilities.Hashsets.Vanilla
                 NPCID.CrimsonGoldfish,
                 NPCID.Goldfish,
                 NPCID.GoldfishWalker,
-
-            #endregion
-
         ];
 
         private static HashSet<int> CreateVanillaBossSpecificTypes() =>
         [
-
-            #region
-
                 NPCID.DukeFishron,
-
-            #endregion
-
         ];
     }
 }

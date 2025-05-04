@@ -19,20 +19,18 @@ namespace LuneLib.Utilities.Hashsets.Thorium
 
         private static HashSet<int> CreateThoriumOreSet() =>
         [
-            #region prehardmode
+            // prehardmode
             ModContent.TileType<SynthGold>(),
             ModContent.TileType<SynthPlatinum>(),
             ModContent.TileType<SmoothCoal>(),
             ModContent.TileType<LifeQuartz>(),
             ModContent.TileType<ThoriumOre>(),
             ModContent.TileType<Aquaite>(),
-            #endregion
 
-            #region hardmode
+            // hardmode
             ModContent.TileType<LodeStone>(),
             ModContent.TileType<ValadiumChunk>(),
             ModContent.TileType<IllumiteChunk>(),
-            #endregion
         ];
     }
 }

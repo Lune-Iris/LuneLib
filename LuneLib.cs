@@ -1,10 +1,11 @@
+using LuneLib.Common.Players.LuneLibPlayer;
 using LuneLib.Core.Config;
+using LuneLib.Utilities;
 using Steamworks;
 using System;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.ModLoader;
-using static LuneLib.Utilities.LuneLibUtils;
 using static Terraria.GameContent.PlayerEyeHelper;
 
 namespace LuneLib
@@ -66,22 +67,20 @@ namespace LuneLib
         {
             orig(ref self, player);
 
-            if (debug.LL && LL)
+            var modPlayer = player.GetModPlayer<LibPlayer>();
+
+            if (modPlayer.forceEyesClosed)
             {
                 try
                 {
-                    if (player.OceanMan())
-                    {
-                        return;
-                    }
-                    else
-                    {
+                    if (!player.OceanMan())
                         self.SwitchToState(EyeState.IsBlind);
-                    }
+                    else
+                        self.SwitchToState(EyeState.NormalBlinking);
                 }
                 catch (Exception e)
                 {
-                    Logger.Error($"(Tell Lune. She needs the message (if shes alive)) Aw shit here we go again. error_ref: {e.Message}");
+                    Logger.Error($"Aw shit… error_ref: {e.Message}");
                 }
             }
         }

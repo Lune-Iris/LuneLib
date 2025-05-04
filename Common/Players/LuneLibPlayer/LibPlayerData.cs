@@ -4,7 +4,6 @@ namespace LuneLib.Common.Players.LuneLibPlayer
 {
     public partial class LibPlayer : ModPlayer
     {
-        #region All My Mods stuff
 
         #region Lunes Worse of Life
 
@@ -22,24 +21,9 @@ namespace LuneLib.Common.Players.LuneLibPlayer
 
         #endregion
 
-        #region Calamitas Mommy (Lunes Shitty Mod PRIVATE)
-
-        public bool WConvert = false; // Private, just for fun trollling xd x3 :3 nyaa meow ;3 mrrp meeewwww mrrowww meow meow converts all projectiles you shoot to wulfrum blasts beucase i thought id be funny
-        public bool LcDepth = false; // Custom crush depth debuff
-        public bool LTOceanH = false; // placeholder i forgot
-
-        #endregion
-
-        #endregion
-
-        #region electromagclass
-
-        public float ElectroMagDamageAdd;
-        public float ElectroMagDamageMult = 1f;
-
-        #endregion
-
         public bool LunesSpiritPet = false; // Custom pet
+        public bool IsLune = false; // self explanatory
+        public bool forceEyesClosed = false; // for my eyes to stay closed unless im underwater
 
         public override void ResetEffects()
         {
@@ -56,9 +40,6 @@ namespace LuneLib.Common.Players.LuneLibPlayer
             currentDepthPressure = 0;
 
             LunesSpiritPet = false;
-            WConvert = false;
-            LcDepth = false;
-            LTOceanH = false;
         }
     }
 }

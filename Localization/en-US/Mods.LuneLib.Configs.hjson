@@ -1,64 +1,48 @@
 Debug: {
-	Headers.debug101: Debuging
+	Headers.Debug: Debug
 	DisplayName: Debug
-
-	Eyes: {
-		Label: EC
-		Tooltip: most likely wont do anything for you
-	}
 
 	LL: {
 		Label: LL
-		Tooltip: most likely wont do anything for you
-	}
-
-	DI: {
-		Label: DI
-		Tooltip: enables my pet...
+		Tooltip: most likely wont do anything for you.
 	}
 
 	TestMode: {
 		Label: Test Mode
-		Tooltip: ""
-	}
-
-	FunnyMode: {
-		Label: Funny Mode
-		Tooltip: ""
-	}
-
-	LunesPet: {
-		Tooltip: ""
-		Label: Lunes Pet
+		Tooltip: fish
 	}
 }
 
 Client: {
 	dayshelptext: {
 		Label: Days Help Text
-		Tooltip: Toggles the red help text under the message of Days
+		Tooltip: Toggles the red help text under the message of Days.
 	}
 
 	Days: {
 		Label: Days
-		Tooltip: Shows a sick ass message at the start of every day
+		Tooltip:
+			'''
+			Shows a sick-ass message at the start of every day.
+			(Game reference)
+			'''
 	}
 
 	DebugMessages: {
 		Label: Debug Messages
-		Tooltip: ""
+		Tooltip: shows information for me to test if something works as it should.
 	}
 
-	Headers.Spammy: Spammy
+	Headers.Client: Client
 	DisplayName: Client
 }
 
 Server: {
 	FreddyFiveBear: {
-		Tooltip: ""
-		Label: Freddy Five Bear
+		Tooltip: Is that freddy five bears!?
+		Label: Freddy Five Bears
 	}
 
-	Headers.Spammy: Spammy Header
+	Headers.Silly: Silly
 	DisplayName: Server
 }

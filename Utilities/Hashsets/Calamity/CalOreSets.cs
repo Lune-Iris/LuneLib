@@ -20,12 +20,11 @@ namespace LuneLib.Utilities.Hashsets.Calamity
 
         private static HashSet<int> CreateCalOreSet() =>
         [
-            #region prehardmode
+            // prehardmode
             ModContent.TileType<SeaPrism>(),
             ModContent.TileType<AerialiteOre>(),
-            #endregion
 
-            #region hardmode
+            // hardmode
             ModContent.TileType<AerialiteOreDisenchanted>(),
             ModContent.TileType<InfernalSuevite>(),
             ModContent.TileType<CryonicOre>(),
@@ -33,13 +32,11 @@ namespace LuneLib.Utilities.Hashsets.Calamity
             ModContent.TileType<PerennialOre>(),
             ModContent.TileType<ScoriaOre>(),
             ModContent.TileType<AstralOre>(),
-            #endregion
 
-            #region postmoonguy
+            // postmoonguy
             ModContent.TileType<ExodiumOre>(),
             ModContent.TileType<UelibloomOre>(),
             ModContent.TileType<AuricOre>(),
-            #endregion
         ];
     }
 }

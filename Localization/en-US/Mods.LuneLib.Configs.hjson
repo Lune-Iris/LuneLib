@@ -4,12 +4,16 @@ Debug: {
 
 	LL: {
 		Label: LL
-		Tooltip: most likely wont do anything for you.
+		Tooltip:
+			'''
+			This just checks if its a certain player.
+			Most likely wont do anything for you.
+			'''
 	}
 
 	TestMode: {
 		Label: Test Mode
-		Tooltip: fish
+		Tooltip: debugging for LL
 	}
 }
 
@@ -39,7 +43,7 @@ Client: {
 
 Server: {
 	FreddyFiveBear: {
-		Tooltip: Is that freddy five bears!?
+		Tooltip: Is that freddy five bears!? (adds a freddy fazbear plush you can craft lmfao)
 		Label: Freddy Five Bears
 	}
 

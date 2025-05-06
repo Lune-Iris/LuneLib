@@ -23,7 +23,6 @@ namespace LuneLib.Common.Players.LuneLibPlayer
 
         public bool LunesSpiritPet = false; // Custom pet
         public bool IsLune = false; // self explanatory
-        public bool forceEyesClosed = false; // for my eyes to stay closed unless im underwater
 
         public override void ResetEffects()
         {

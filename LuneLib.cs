@@ -7,6 +7,8 @@ using Terraria;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 using static Terraria.GameContent.PlayerEyeHelper;
+using Terraria.ID;
+using static LuneLib.Utilities.LuneLibUtils;
 
 namespace LuneLib
 {
@@ -67,9 +69,7 @@ namespace LuneLib
         {
             orig(ref self, player);
 
-            var modPlayer = player.GetModPlayer<LibPlayer>();
-
-            if (modPlayer.forceEyesClosed)
+            if ((Main.netMode != NetmodeID.SinglePlayer && player.whoAmI == LuneSync.LuneWhoAmI) || (Main.netMode == NetmodeID.SinglePlayer && LL))
             {
                 try
                 {

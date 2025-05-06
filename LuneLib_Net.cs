@@ -1,30 +1,29 @@
 ﻿using LuneLib.Common.Players.LuneLibPlayer;
 using System.IO;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace LuneLib
 {
     public partial class LuneLib : Mod
     {
-        public enum PacketType : byte
-        {
-            SyncEyes
-        }
+        public enum MessageType : byte { SetLuneIndex }
 
         public override void HandlePacket(BinaryReader reader, int whoAmI)
         {
-            PacketType type = (PacketType)reader.ReadByte();
-            switch (type)
+            MessageType msg = (MessageType)reader.ReadByte();
+            if (msg == MessageType.SetLuneIndex)
             {
-                case PacketType.SyncEyes:
-                    byte playerIndex = reader.ReadByte();
-                    bool closed = reader.ReadBoolean();
-                    if (playerIndex >= 0 && playerIndex < Main.maxPlayers)
-                    {
-                        Main.player[playerIndex].GetModPlayer<LibPlayer>().forceEyesClosed = closed;
-                    }
-                break;
+                byte luneSlot = reader.ReadByte();
+                if (Main.netMode == NetmodeID.Server)
+                {
+                    var pkt = GetPacket();
+                    pkt.Write((byte)MessageType.SetLuneIndex);
+                    pkt.Write(luneSlot);
+                    pkt.Send();
+                }
+                LuneSync.LuneWhoAmI = luneSlot;
             }
         }
     }

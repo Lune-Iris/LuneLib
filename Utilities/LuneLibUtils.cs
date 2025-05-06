@@ -1,5 +1,4 @@
-﻿using CalamityMod.BiomeManagers;
-using LuneLib.Common.Players.LuneLibPlayer;
+﻿using LuneLib.Common.Players.LuneLibPlayer;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Graphics;
@@ -9,7 +8,6 @@ using System.Diagnostics;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.Localization;
-using Terraria.ModLoader;
 
 using static LuneLib.LuneLib;
 
@@ -31,25 +29,36 @@ namespace LuneLib.Utilities
 
         /// <summary>
         /// Checks if it's my SteamID
+        /// NOT TO BE USED WITH NETWORK IMPORTANT TASKS
         /// </summary>
         public static bool LL => LuneL(L);
+
         /// <summary>
         /// Checks if it's my partners SteamID
+        /// NOT TO BE USED WITH NETWORK IMPORTANT TASKS
         /// </summary>
         public static bool LM => LuneL(L);
+
         /// <summary>
         /// Checks if it's a past artists SteamID
+        /// NOT TO BE USED WITH NETWORK IMPORTANT TASKS
         /// </summary>
         public static bool LE => LuneE(L);
 
+        public static readonly Dictionary<string, Stopwatch> timersnmd = [];
         private static Texture2D messageBackground;
+
         #endregion
 
         #region help
         public static readonly Dictionary<int, Stopwatch> timers = [];
 
+        
         public static bool Wait(int milliseconds)
         {
+            if (L.whoAmI != Main.myPlayer)
+                return false;
+
             if (!timers.ContainsKey(milliseconds))
             {
                 timers[milliseconds] = new Stopwatch();
@@ -66,8 +75,6 @@ namespace LuneLib.Utilities
 
             return false;
         }
-
-        public static readonly Dictionary<string, Stopwatch> timersnmd = [];
 
         public static bool WaitNamed(string name, int milliseconds)
         {
@@ -243,22 +250,18 @@ namespace LuneLib.Utilities
         #endregion
 
         #region Players
+
         /// <summary>
-        /// Checks if it's my SteamID
+        /// Checks if it's my SteamID 
+        /// NOT TO BE USED WITH NETWORK IMPORTANT TASKS
         /// </summary>
         /// <param name="player"></param>
         /// <returns></returns>
-        public static bool LuneL(this Player player)
-        {
-            if (steamID.ToString() == "76561198818748376" && debug.LL && !debug.TestMode && !player.dead)
-                return true;
-            else if (player.name == "fish" && debug.LL && debug.TestMode)
-                return true;
-            return false;
-        }
-        
+        public static bool LuneL(this Player player) => steamID.ToString() == "76561198818748376" && debug.LL && !player.dead;
+
         /// <summary>
         /// Checks if it's my partners SteamID
+        /// NOT TO BE USED WITH NETWORK IMPORTANT TASKS
         /// </summary>
         /// <param name="player"></param>
         /// <returns></returns>
@@ -266,6 +269,7 @@ namespace LuneLib.Utilities
 
         /// <summary>
         /// Checks if it's a past artists SteamID
+        /// NOT TO BE USED WITH NETWORK IMPORTANT TASKS
         /// </summary>
         /// <param name="player"></param>
         /// <returns></returns>

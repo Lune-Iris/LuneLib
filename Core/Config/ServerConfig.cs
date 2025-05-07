@@ -1,20 +1,16 @@
 ﻿using System.ComponentModel;
 using Terraria.ModLoader.Config;
 
-namespace LuneLib.Core.Config
+namespace LuneLib.Core.Config;
+
+public class Server : ModConfig
 {
-    public class Server : ModConfig
-    {
-        public override ConfigScope Mode => ConfigScope.ServerSide;
+    public override ConfigScope Mode => ConfigScope.ServerSide;
 
-        [Header("Silly")]
+    [Header("Silly")]
 
-        [DefaultValue(true)]
-        public bool FreddyFiveBear { get; set; }
+    [DefaultValue(true)]
+    public bool FreddyFiveBear { get; set; }
 
-        public override void OnLoaded()
-        {
-            LuneLib.serverConfig = this;
-        }
-    }
+    public override void OnLoaded() => LuneLib.serverConfig = this;
 }

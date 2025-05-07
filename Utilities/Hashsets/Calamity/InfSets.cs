@@ -10,172 +10,171 @@ using InfernumMode.Content.Projectiles.Generic;
 using System.Collections.Generic;
 using Terraria.ModLoader;
 
-namespace LuneLib.Utilities.Hashsets
+namespace LuneLib.Utilities.Hashsets.Calamity;
+
+[JITWhenModsEnabled("InfernumMode")]
+public static class InfSets
 {
-    [JITWhenModsEnabled("InfernumMode")]
-    public static class InfSets
+    public static readonly HashSet<int> AbyssalProjectiles;
+
+    public static readonly HashSet<int> AbyssalNPCs;
+
+    public static readonly HashSet<int> AquaticBossProjectiles;
+
+    static InfSets()
     {
-        public static readonly HashSet<int> AbyssalProjectiles;
-
-        public static readonly HashSet<int> AbyssalNPCs;
-
-        public static readonly HashSet<int> AquaticBossProjectiles;
-
-        static InfSets()
+        var isInfCalLoaded = ModLoader.HasMod("InfernumMode");
+        if (isInfCalLoaded)
         {
-            var isInfCalLoaded = ModLoader.HasMod("InfernumMode");
-            if (isInfCalLoaded)
-            {
 
-                AbyssalProjectiles = isInfCalLoaded ? CreateInfCalProjSpecificTypes() : [];
+            AbyssalProjectiles = isInfCalLoaded ? CreateInfCalProjSpecificTypes() : [];
 
-                AbyssalNPCs = isInfCalLoaded ? CreateInfCalNpcSpecificTypes() : [];
+            AbyssalNPCs = isInfCalLoaded ? CreateInfCalNpcSpecificTypes() : [];
 
-                AquaticBossProjectiles = isInfCalLoaded ? CreateInfCalBossProjSpecificTypes() : [];
+            AquaticBossProjectiles = isInfCalLoaded ? CreateInfCalBossProjSpecificTypes() : [];
 
-            }
         }
+    }
 
-        private static HashSet<int> CreateInfCalProjSpecificTypes() =>
-        [
-                #region Abyss
+    private static HashSet<int> CreateInfCalProjSpecificTypes() =>
+    [
+            #region Abyss
 
-                    #region Abyss Layer1
+                #region Abyss Layer1
 
-                        ModContent.ProjectileType<BoxJellyZap>(),
-
-                    #endregion
-
-                    #region Abyss Layer3
-
-                        ModContent.ProjectileType<DevilfishExplosion>(),
-
-                    #endregion
-
-                    #region Abyss Layer4
-
-                        ModContent.ProjectileType<EidolistElectricOrb>(),
-                        ModContent.ProjectileType<EidolistElectricOrb2>(),
-                        ModContent.ProjectileType<EidolistIceBomb>(),
-                        ModContent.ProjectileType<EidolistLightning>(),
-                        ModContent.ProjectileType<EidolistRitual>(),
-                        ModContent.ProjectileType<ElectricPulse>(),
-                        ModContent.ProjectileType<EidolistIce>(),
-
-                    #endregion
+                    ModContent.ProjectileType<BoxJellyZap>(),
 
                 #endregion
-        ];
 
-        private static HashSet<int> CreateInfCalNpcSpecificTypes() =>
-        [
-                ModContent.NPCType<DepthFeeder>(),
-                ModContent.NPCType<Herring>(),
-                ModContent.NPCType<LionfishEnemy>(),
-                ModContent.NPCType<ColossalSquidTentacle>(),
-                ModContent.NPCType<RedirectingBubble>(),
-        ];
+                #region Abyss Layer3
 
-        private static HashSet<int> CreateInfCalBossProjSpecificTypes() =>
-        [
+                    ModContent.ProjectileType<DevilfishExplosion>(),
 
-            #region Anahita
+                #endregion
 
-                ModContent.ProjectileType<AnahitaWaterIllusion>(),
-                ModContent.ProjectileType<HeavenlyLullaby>(),
-                ModContent.ProjectileType<WaterBolt>(),
-                ModContent.ProjectileType<RedirectingWaterBolt>(),
-                ModContent.ProjectileType<AtlantisSpear>(),
-                ModContent.ProjectileType<AtlantisSpear2>(),
+                #region Abyss Layer4
+
+                    ModContent.ProjectileType<EidolistElectricOrb>(),
+                    ModContent.ProjectileType<EidolistElectricOrb2>(),
+                    ModContent.ProjectileType<EidolistIceBomb>(),
+                    ModContent.ProjectileType<EidolistLightning>(),
+                    ModContent.ProjectileType<EidolistRitual>(),
+                    ModContent.ProjectileType<ElectricPulse>(),
+                    ModContent.ProjectileType<EidolistIce>(),
+
+                #endregion
 
             #endregion
+    ];
 
-            #region Leviathan
+    private static HashSet<int> CreateInfCalNpcSpecificTypes() =>
+    [
+            ModContent.NPCType<DepthFeeder>(),
+            ModContent.NPCType<Herring>(),
+            ModContent.NPCType<LionfishEnemy>(),
+            ModContent.NPCType<ColossalSquidTentacle>(),
+            ModContent.NPCType<RedirectingBubble>(),
+    ];
 
-                ModContent.ProjectileType<LeviathanVomit>(),
-                ModContent.ProjectileType<LeviathanMeteor>(),
-                ModContent.ProjectileType<AquaticAberrationProj>(),
+    private static HashSet<int> CreateInfCalBossProjSpecificTypes() =>
+    [
 
-            #endregion
+        #region Anahita
 
-            #region Old Duke
+            ModContent.ProjectileType<AnahitaWaterIllusion>(),
+            ModContent.ProjectileType<HeavenlyLullaby>(),
+            ModContent.ProjectileType<WaterBolt>(),
+            ModContent.ProjectileType<RedirectingWaterBolt>(),
+            ModContent.ProjectileType<AtlantisSpear>(),
+            ModContent.ProjectileType<AtlantisSpear2>(),
 
-                ModContent.ProjectileType<OldDukeTooth>(),
-                ModContent.ProjectileType<HomingAcid>(),
-                ModContent.ProjectileType<OldDukeTooth>(),
-                ModContent.ProjectileType<SharkSummonVortex>(),
-                ModContent.ProjectileType<SulphuricBlob>(),
+        #endregion
 
-            #endregion
+        #region Leviathan
 
-            #region Aquatic Scourge
+            ModContent.ProjectileType<LeviathanVomit>(),
+            ModContent.ProjectileType<LeviathanMeteor>(),
+            ModContent.ProjectileType<AquaticAberrationProj>(),
 
-                ModContent.ProjectileType<AcidBubble>(),
-                ModContent.ProjectileType<WaterClearingBubble>(),
-                ModContent.ProjectileType<AquaticScourgeBodySpike>(),
-                ModContent.ProjectileType<LeechFeeder>(),
-                ModContent.ProjectileType<SulphuricGas>(),
-                ModContent.ProjectileType<AcceleratingArcingAcid>(),
-                ModContent.ProjectileType<RadiationPulse>(),
-                ModContent.ProjectileType<SulphuricGasDebuff>(),
-                ModContent.ProjectileType<SulphurousRockRubble>(),
-                ModContent.ProjectileType<SulphuricTornado>(),
-                ModContent.ProjectileType<FallingAcid>(),
+        #endregion
 
-            #endregion
+        #region Old Duke
 
-            #region Acid Rain
+            ModContent.ProjectileType<OldDukeTooth>(),
+            ModContent.ProjectileType<HomingAcid>(),
+            ModContent.ProjectileType<OldDukeTooth>(),
+            ModContent.ProjectileType<SharkSummonVortex>(),
+            ModContent.ProjectileType<SulphuricBlob>(),
 
-                ModContent.ProjectileType<GammaRain>(),
-                ModContent.ProjectileType<GammaBurstLineTelegraph>(),
-                ModContent.ProjectileType<ConvergingGammaEnergy>(),
-                ModContent.ProjectileType<GammaSuperDeathray>(),
+        #endregion
 
-            #endregion
+        #region Aquatic Scourge
 
-            #region Giant Clam
+            ModContent.ProjectileType<AcidBubble>(),
+            ModContent.ProjectileType<WaterClearingBubble>(),
+            ModContent.ProjectileType<AquaticScourgeBodySpike>(),
+            ModContent.ProjectileType<LeechFeeder>(),
+            ModContent.ProjectileType<SulphuricGas>(),
+            ModContent.ProjectileType<AcceleratingArcingAcid>(),
+            ModContent.ProjectileType<RadiationPulse>(),
+            ModContent.ProjectileType<SulphuricGasDebuff>(),
+            ModContent.ProjectileType<SulphurousRockRubble>(),
+            ModContent.ProjectileType<SulphuricTornado>(),
+            ModContent.ProjectileType<FallingAcid>(),
 
-                ModContent.ProjectileType<PearlSwirl>(),
+        #endregion
 
-            #endregion
+        #region Acid Rain
 
-            #region Colossal Squidward
+            ModContent.ProjectileType<GammaRain>(),
+            ModContent.ProjectileType<GammaBurstLineTelegraph>(),
+            ModContent.ProjectileType<ConvergingGammaEnergy>(),
+            ModContent.ProjectileType<GammaSuperDeathray>(),
 
-                ModContent.ProjectileType<InkBlob>(),
-                ModContent.ProjectileType<InkBolt>(),
+        #endregion
 
-            #endregion
+        #region Giant Clam
 
-            #region Primordial Wyrm (Adult Eidolon Wyrm)
+            ModContent.ProjectileType<PearlSwirl>(),
 
-                ModContent.ProjectileType<TerminusAnimationProj>(),
-                ModContent.ProjectileType<AEWTelegraphLine>(),
-                ModContent.ProjectileType<DivineLightBolt>(),
-                ModContent.ProjectileType<DivineLightOrb>(),
-                ModContent.ProjectileType<DivineLightLaserbeam>(),
-                ModContent.ProjectileType<TerminusDeathray>(),
-                ModContent.ProjectileType<HorizontalRayTerminus>(),
-                ModContent.ProjectileType<AEWNightmareWyrm>(),
-                ModContent.ProjectileType<AbyssalSoul>(),
-                ModContent.ProjectileType<AbyssalSoulTelegraph>(),
-                ModContent.ProjectileType<AEWIllusionTelegraphLine>(),
-                ModContent.ProjectileType<ConvergingLumenylCrystal>(),
-                ModContent.ProjectileType<AEWSplitForm>(),
-                ModContent.ProjectileType<CircleCenterTelegraph>(),
-                ModContent.ProjectileType<PsychicBlast>(),
-                ModContent.ProjectileType<SimpleAbyssalSoul>(),
-                ModContent.ProjectileType<BaseAttackingTerminusProjectile>(),
+        #endregion
 
-            #endregion
+        #region Colossal Squidward
 
-            #region Reaper? aw man... so we back in the mine
+            ModContent.ProjectileType<InkBlob>(),
+            ModContent.ProjectileType<InkBolt>(),
 
-                ModContent.ProjectileType<MiniReaperShark>(),
-                ModContent.ProjectileType<ReaperSharkIceBreath>(),
-                ModContent.ProjectileType<AbyssalIce>(),
+        #endregion
 
-            #endregion
+        #region Primordial Wyrm (Adult Eidolon Wyrm)
 
-        ];
-    }
+            ModContent.ProjectileType<TerminusAnimationProj>(),
+            ModContent.ProjectileType<AEWTelegraphLine>(),
+            ModContent.ProjectileType<DivineLightBolt>(),
+            ModContent.ProjectileType<DivineLightOrb>(),
+            ModContent.ProjectileType<DivineLightLaserbeam>(),
+            ModContent.ProjectileType<TerminusDeathray>(),
+            ModContent.ProjectileType<HorizontalRayTerminus>(),
+            ModContent.ProjectileType<AEWNightmareWyrm>(),
+            ModContent.ProjectileType<AbyssalSoul>(),
+            ModContent.ProjectileType<AbyssalSoulTelegraph>(),
+            ModContent.ProjectileType<AEWIllusionTelegraphLine>(),
+            ModContent.ProjectileType<ConvergingLumenylCrystal>(),
+            ModContent.ProjectileType<AEWSplitForm>(),
+            ModContent.ProjectileType<CircleCenterTelegraph>(),
+            ModContent.ProjectileType<PsychicBlast>(),
+            ModContent.ProjectileType<SimpleAbyssalSoul>(),
+            ModContent.ProjectileType<BaseAttackingTerminusProjectile>(),
+
+        #endregion
+
+        #region Reaper? aw man... so we back in the mine
+
+            ModContent.ProjectileType<MiniReaperShark>(),
+            ModContent.ProjectileType<ReaperSharkIceBreath>(),
+            ModContent.ProjectileType<AbyssalIce>(),
+
+        #endregion
+
+    ];
 }

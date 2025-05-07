@@ -2,35 +2,34 @@
 using Terraria.ModLoader;
 using ThoriumMod.Tiles;
 
-namespace LuneLib.Utilities.Hashsets.Thorium
+namespace LuneLib.Utilities.Hashsets.Thorium;
+
+[JITWhenModsEnabled("ThoriumMod")]
+public static class ThoriumOreSets
 {
-    [JITWhenModsEnabled("ThoriumMod")]
-    public static class ThoriumOreSets
+    public static readonly HashSet<int> ThoriumOreSet;
+
+    static ThoriumOreSets()
     {
-        public static readonly HashSet<int> ThoriumOreSet;
-
-        static ThoriumOreSets()
+        if (LuneLib.instance.ThoriumModLoaded)
         {
-            if (LuneLib.instance.ThoriumModLoaded)
-            {
-                ThoriumOreSet = LuneLib.instance.ThoriumModLoaded ? CreateThoriumOreSet() : [];
-            }
+            ThoriumOreSet = LuneLib.instance.ThoriumModLoaded ? CreateThoriumOreSet() : [];
         }
-
-        private static HashSet<int> CreateThoriumOreSet() =>
-        [
-            // prehardmode
-            ModContent.TileType<SynthGold>(),
-            ModContent.TileType<SynthPlatinum>(),
-            ModContent.TileType<SmoothCoal>(),
-            ModContent.TileType<LifeQuartz>(),
-            ModContent.TileType<ThoriumOre>(),
-            ModContent.TileType<Aquaite>(),
-
-            // hardmode
-            ModContent.TileType<LodeStone>(),
-            ModContent.TileType<ValadiumChunk>(),
-            ModContent.TileType<IllumiteChunk>(),
-        ];
     }
+
+    private static HashSet<int> CreateThoriumOreSet() =>
+    [
+        // prehardmode
+        ModContent.TileType<SynthGold>(),
+        ModContent.TileType<SynthPlatinum>(),
+        ModContent.TileType<SmoothCoal>(),
+        ModContent.TileType<LifeQuartz>(),
+        ModContent.TileType<ThoriumOre>(),
+        ModContent.TileType<Aquaite>(),
+
+        // hardmode
+        ModContent.TileType<LodeStone>(),
+        ModContent.TileType<ValadiumChunk>(),
+        ModContent.TileType<IllumiteChunk>(),
+    ];
 }

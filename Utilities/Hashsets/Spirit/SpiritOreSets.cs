@@ -1,14 +1,4 @@
-﻿using SpiritMod.Items.BossLoot.StarplateDrops;
-using SpiritMod.Items.Sets.BismiteSet;
-using SpiritMod.Items.Sets.CryoliteSet;
-using SpiritMod.Items.Sets.FloranSet;
-using SpiritMod.Items.Sets.GraniteSet;
-using SpiritMod.Items.Sets.MarbleSet;
-using SpiritMod.Items.Sets.SpiritSet;
-using System.Collections.Generic;
-using Terraria.ModLoader;
-
-namespace LuneLib.Utilities.Hashsets.Spirit;
+﻿namespace LuneLib.Utilities.Hashsets.Spirit;
 
 [JITWhenModsEnabled("SpiritMod")]
 public static class SpiritOreSets

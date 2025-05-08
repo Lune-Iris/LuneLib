@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using Terraria.ModLoader;
-using ThoriumMod.Tiles;
-
-namespace LuneLib.Utilities.Hashsets.Thorium;
+﻿namespace LuneLib.Utilities.Hashsets.Thorium;
 
 [JITWhenModsEnabled("ThoriumMod")]
 public static class ThoriumOreSets

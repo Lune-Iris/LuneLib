@@ -1,10 +1,4 @@
-﻿using LuneLib.Common.Players.LuneLibPlayer;
-using System.IO;
-using Terraria;
-using Terraria.ID;
-using Terraria.ModLoader;
-
-namespace LuneLib;
+﻿namespace LuneLib;
 
 public partial class LuneLib : Mod
 {

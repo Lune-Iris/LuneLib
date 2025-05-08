@@ -1,9 +1,4 @@
-﻿using CalValEX.NPCs.Critters;
-using System.Collections.Generic;
-
-using Terraria.ModLoader;
-
-namespace LuneLib.Utilities.Hashsets.Calamity;
+﻿namespace LuneLib.Utilities.Hashsets.Calamity;
 
 [JITWhenModsEnabled("CalValEX")]
 public static class CalEXSets

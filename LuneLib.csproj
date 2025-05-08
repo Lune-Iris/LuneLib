@@ -3,6 +3,7 @@
 	<PropertyGroup>
 		<AssemblyName>LuneLib</AssemblyName>
 		<LangVersion>latest</LangVersion>
+		<ImplicitUsings>disable</ImplicitUsings>
 	</PropertyGroup>
 	<ItemGroup>
 		<Reference Include="CalValEX">

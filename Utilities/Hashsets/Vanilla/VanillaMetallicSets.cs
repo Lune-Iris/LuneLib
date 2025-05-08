@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using Terraria.ID;
-
-namespace LuneLib.Utilities.Hashsets.Vanilla;
+﻿namespace LuneLib.Utilities.Hashsets.Vanilla;
 
 public static class VanillaMetallicSets
 {

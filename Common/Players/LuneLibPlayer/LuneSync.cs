@@ -1,10 +1,4 @@
-﻿using LuneLib.Utilities;
-using Steamworks;
-using Terraria;
-using Terraria.ID;
-using Terraria.ModLoader;
-
-namespace LuneLib.Common.Players.LuneLibPlayer;
+﻿namespace LuneLib.Common.Players.LuneLibPlayer;
 
 public class LuneSync : ModPlayer
 {

@@ -1,11 +1,4 @@
-﻿using LuneLib.Utilities;
-using Microsoft.Xna.Framework;
-using Terraria;
-using Terraria.GameContent.Events;
-using Terraria.ModLoader;
-using static LuneLib.Utilities.LuneLibUtils;
-
-namespace LuneLib.Common.Players.LuneLibPlayer;
+﻿namespace LuneLib.Common.Players.LuneLibPlayer;
 
 public partial class LibPlayer : ModPlayer
 {

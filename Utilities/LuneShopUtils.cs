@@ -1,8 +1,4 @@
-﻿using System;
-using Terraria;
-using Terraria.ModLoader;
-
-namespace LuneLib.Utilities;
+﻿namespace LuneLib.Utilities;
 
 public static class LuneShopUtils
 {

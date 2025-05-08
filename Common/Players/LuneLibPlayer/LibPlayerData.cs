@@ -1,6 +1,4 @@
-﻿using Terraria.ModLoader;
-
-namespace LuneLib.Common.Players.LuneLibPlayer;
+﻿namespace LuneLib.Common.Players.LuneLibPlayer;
 
 public partial class LibPlayer : ModPlayer
 {

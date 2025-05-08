@@ -1,9 +1,4 @@
-﻿using CalamityMod.Tiles.Ores;
-using CalamityMod.Tiles.SunkenSea;
-using System.Collections.Generic;
-using Terraria.ModLoader;
-
-namespace LuneLib.Utilities.Hashsets.Calamity;
+﻿namespace LuneLib.Utilities.Hashsets.Calamity;
 
 [JITWhenModsEnabled("CalamityMod")]
 public static class CalOreSets

@@ -1,16 +1,4 @@
-﻿using InfernumMode.Content.BehaviorOverrides.AbyssAIs;
-using InfernumMode.Content.BehaviorOverrides.BossAIs.AdultEidolonWyrm;
-using InfernumMode.Content.BehaviorOverrides.BossAIs.AquaticScourge;
-using InfernumMode.Content.BehaviorOverrides.BossAIs.DukeFishron;
-using InfernumMode.Content.BehaviorOverrides.BossAIs.Leviathan;
-using InfernumMode.Content.BehaviorOverrides.BossAIs.OldDuke;
-using InfernumMode.Content.BehaviorOverrides.MinibossAIs.GiantClam;
-using InfernumMode.Content.BehaviorOverrides.MinibossAIs.NuclearTerror;
-using InfernumMode.Content.Projectiles.Generic;
-using System.Collections.Generic;
-using Terraria.ModLoader;
-
-namespace LuneLib.Utilities.Hashsets.Calamity;
+﻿namespace LuneLib.Utilities.Hashsets.Calamity;
 
 [JITWhenModsEnabled("InfernumMode")]
 public static class InfSets

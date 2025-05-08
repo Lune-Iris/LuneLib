@@ -1,7 +1,4 @@
-﻿using System.ComponentModel;
-using Terraria.ModLoader.Config;
-
-namespace LuneLib.Core.Config;
+﻿namespace LuneLib.Core.Config;
 
 public class Server : ModConfig
 {

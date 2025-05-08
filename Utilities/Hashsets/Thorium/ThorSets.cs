@@ -1,15 +1,4 @@
-﻿using System.Collections.Generic;
-using Terraria.ModLoader;
-using ThoriumMod.NPCs.BossForgottenOne;
-using ThoriumMod.NPCs.BossQueenJellyfish;
-using ThoriumMod.NPCs.Depths;
-using ThoriumMod.Projectiles;
-using ThoriumMod.Projectiles.Boss;
-using ThoriumMod.Projectiles.Enemy;
-using ThoriumMod.Tiles;
-using ThoriumMod.Walls;
-
-namespace LuneLib.Utilities.Hashsets.Thorium;
+﻿namespace LuneLib.Utilities.Hashsets.Thorium;
 
 [JITWhenModsEnabled("ThoriumMod")]
 public class ThorSets

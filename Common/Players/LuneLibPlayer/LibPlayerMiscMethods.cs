@@ -1,12 +1,4 @@
-﻿using LuneLib.Utilities.Hashsets.Vanilla;
-using SpiritMod.Items.Armor.AstronautVanity;
-using SpiritMod.Items.BossLoot.StarplateDrops.StarArmor;
-using System;
-using Terraria;
-using Terraria.ID;
-using Terraria.ModLoader;
-
-namespace LuneLib.Common.Players.LuneLibPlayer;
+﻿namespace LuneLib.Common.Players.LuneLibPlayer;
 
 public partial class LibPlayer : ModPlayer
 {

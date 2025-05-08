@@ -1,19 +1,9 @@
-using LuneLib.Core.Config;
-using LuneLib.Utilities;
-using Steamworks;
-using System;
-using Terraria;
-using Terraria.GameContent;
-using Terraria.ModLoader;
-using static LuneLib.Utilities.LuneLibUtils;
-using static Terraria.GameContent.PlayerEyeHelper;
-
 namespace LuneLib;
 
 public partial class LuneLib : Mod
 {
     public static LuneLib instance;
-    public static Debug debug;
+    public static Core.Config.Debug debug;
     public static Client clientConfig;
     public static Server serverConfig;
 

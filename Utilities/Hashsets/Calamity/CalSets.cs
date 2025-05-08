@@ -1,24 +1,4 @@
-﻿using CalamityMod.NPCs.Abyss;
-using CalamityMod.NPCs.AcidRain;
-using CalamityMod.NPCs.AquaticScourge;
-using CalamityMod.NPCs.Leviathan;
-using CalamityMod.NPCs.NormalNPCs;
-using CalamityMod.NPCs.OldDuke;
-using CalamityMod.NPCs.PrimordialWyrm;
-using CalamityMod.NPCs.SulphurousSea;
-using CalamityMod.NPCs.SunkenSea;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.Projectiles.Enemy;
-using CalamityMod.Projectiles.Environment;
-using CalamityMod.Tiles.Abyss;
-using CalamityMod.Tiles.Abyss.AbyssAmbient;
-using CalamityMod.Tiles.Ores;
-using CalamityMod.Tiles.SunkenSea;
-using CalamityMod.Walls;
-using System.Collections.Generic;
-using Terraria.ModLoader;
-
-namespace LuneLib.Utilities.Hashsets.Calamity;
+﻿namespace LuneLib.Utilities.Hashsets.Calamity;
 
 [JITWhenModsEnabled("CalamityMod")]
 public static class CalSets

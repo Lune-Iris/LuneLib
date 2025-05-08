@@ -1,16 +1,4 @@
-﻿using SpiritMod.NPCs.Bloatfish;
-using SpiritMod.NPCs.Critters;
-using SpiritMod.NPCs.Critters.Ocean;
-using SpiritMod.NPCs.ElectricEel;
-using SpiritMod.NPCs.Horned_Crustacean;
-using SpiritMod.NPCs.Mimic;
-using SpiritMod.NPCs.Reach;
-using SpiritMod.NPCs.Sea_Mandrake;
-using SpiritMod.NPCs.Tides;
-using System.Collections.Generic;
-using Terraria.ModLoader;
-
-namespace LuneLib.Utilities.Hashsets.Spirit;
+﻿namespace LuneLib.Utilities.Hashsets.Spirit;
 
 [JITWhenModsEnabled("SpiritMod")]
 public static class SpiritSets

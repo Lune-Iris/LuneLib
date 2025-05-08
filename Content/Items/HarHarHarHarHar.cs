@@ -1,9 +1,4 @@
-﻿using LuneLib.Content.Tiles;
-using Terraria;
-using Terraria.ID;
-using Terraria.ModLoader;
-
-namespace LuneLib.Content.Items;
+﻿namespace LuneLib.Content.Items;
 
 public class HarHarHarHarHar : ModItem
 {
